@@ -1,3 +1,5 @@
+package lambda;
+
 public class LambdaKonu01 {
 
 //slayt2 =>filter a kadar

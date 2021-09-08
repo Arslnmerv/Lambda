@@ -125,4 +125,5 @@ public class LambdaKonu01 {
 // ya da
 //map(t->t.replaceAll("\\W", "")     \\W :harf ve rakam dışındakiler
 
+
 }

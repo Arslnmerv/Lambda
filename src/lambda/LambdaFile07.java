@@ -7,10 +7,10 @@ import java.util.Arrays;
 
 public class LambdaFile07 {
     public static void main(String[] args) {
-  //functional programming kullanarak bir dosya nasıl okunur
+        //functional programming kullanarak bir dosya nasıl okunur
 
         try {
-            Files.lines(Paths.get("C:\\Users\\Administrator\\IdeaProjects\\Lambda\\src\\lambda\\LambdaFile")).forEach(t-> System.out.println(t));
+            Files.lines(Paths.get("C:\\Users\\Administrator\\IdeaProjects\\Lambda\\src\\lambda\\LambdaFile")).forEach(t -> System.out.println(t));
         } catch (IOException e) {
             System.out.println(e);
         }
@@ -18,7 +18,7 @@ public class LambdaFile07 {
         //Tüm karakterleri büyük harfe dönüştürün ve okuyun
 
         try {
-            Files.lines(Paths.get("C:\\Users\\Administrator\\IdeaProjects\\Lambda\\src\\lambda\\LambdaFile")).map(String::toUpperCase).forEach(t-> System.out.println(t));
+            Files.lines(Paths.get("C:\\Users\\Administrator\\IdeaProjects\\Lambda\\src\\lambda\\LambdaFile")).map(String::toUpperCase).forEach(t -> System.out.println(t));
         } catch (IOException e) {
             System.out.println(e);
         }
@@ -26,8 +26,8 @@ public class LambdaFile07 {
         //metindeki farklı kelimeleri yazdır
 
         try {
-            Files.lines(Paths.get("C:\\Users\\Administrator\\IdeaProjects\\Lambda\\src\\lambda\\LambdaFile")).map(t->t.split(" ")).
-                    flatMap(Arrays::stream).map(t->t.replaceAll("\\W","")).distinct().forEach(System.out::println);
+            Files.lines(Paths.get("C:\\Users\\Administrator\\IdeaProjects\\Lambda\\src\\lambda\\LambdaFile")).map(t -> t.split(" ")).
+                    flatMap(Arrays::stream).map(t -> t.replaceAll("\\W", "")).distinct().forEach(System.out::println);
             //Files.lines(Paths.get("C:\\Users\\Administrator\\IdeaProjects\\Lambda\\src\\lambda\\LambdaFile")).map(t->t.split(" ")).flatMap(Arrays::stream).forEach(System.out::println);
         } catch (IOException e) {
             System.out.println(e);
@@ -37,7 +37,7 @@ public class LambdaFile07 {
 
         try {
             Files.lines(Paths.get("C:\\Users\\Administrator\\IdeaProjects\\Lambda\\src\\lambda\\LambdaFile")).
-                    map(t->t.split(" ")).flatMap(Arrays::stream).filter(t->t.contains("e")).forEach(System.out::println);
+                    map(t -> t.split(" ")).flatMap(Arrays::stream).filter(t -> t.contains("e")).forEach(System.out::println);
         } catch (IOException e) {
             System.out.println(e);
         }
